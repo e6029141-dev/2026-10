@@ -1,11 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=you, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>SKYBOUND — 横スクロールアクション</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
 </head>
 <body>
-    ようこそ、私のページへ
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SKYBOUND ホーム">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>SKYBOUND<span class="brand-sub"> / MINI ADVENTURE</span></span>
+      </a>
+      <div class="topbar-note"><span class="live-dot"></span> 旅のはじまり</div>
+    </header>
+
+    <section class="game-card" aria-label="横スクロールアクションゲーム">
+      <div class="hud">
+        <div class="level-label"><span class="level-icon">01</span><span>風の谷</span></div>
+        <div class="score" aria-live="polite"><span aria-hidden="true">✦</span> <span id="score">0</span><span class="score-total"> / 5</span></div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="game" aria-label="プレイヤーを操作してゴールを目指すゲーム"></canvas>
+        <div class="start-hint" id="hint">← → または A / D で移動　·　スペースでジャンプ</div>
+      </div>
+      <div class="game-footer">
+        <p id="message" aria-live="polite">光るかけらを集めて、旗のところまで進もう。</p>
+        <button id="restart" type="button" aria-label="ゲームを最初からやり直す">↻ <span>やり直す</span></button>
+      </div>
+    </section>
+
+    <div class="touch-controls" aria-label="タッチ操作">
+      <button class="touch-button" data-key="left" aria-label="左へ移動">←</button>
+      <button class="touch-button jump-button" data-key="jump" aria-label="ジャンプ">ジャンプ</button>
+      <button class="touch-button" data-key="right" aria-label="右へ移動">→</button>
+    </div>
+    <footer class="page-footer">小さな冒険へ、出発。</footer>
+  </main>
 </body>
 </html>
