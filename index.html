@@ -24,8 +24,8 @@
         <div class="score" aria-live="polite"><span aria-hidden="true">✦</span> <span id="score">0</span><span class="score-total"> / 5</span></div>
       </div>
       <div class="canvas-wrap">
-        <canvas id="game" aria-label="プレイヤーを操作してゴールを目指すゲーム"></canvas>
-        <div class="start-hint" id="hint">← → または A / D で移動　·　スペースでジャンプ</div>
+        <canvas id="game" aria-label="タップで移動先を指定し、ダブルタップでジャンプするゲーム"></canvas>
+        <div class="start-hint" id="hint">タップで移動先を指定 · ダブルタップでジャンプ</div>
       </div>
       <div class="game-footer">
         <p id="message" aria-live="polite">光るかけらを集めて、旗のところまで進もう。</p>
@@ -33,11 +33,6 @@
       </div>
     </section>
 
-    <div class="touch-controls" aria-label="タッチ操作">
-      <button class="touch-button" data-key="left" aria-label="左へ移動">←</button>
-      <button class="touch-button jump-button" data-key="jump" aria-label="ジャンプ">ジャンプ</button>
-      <button class="touch-button" data-key="right" aria-label="右へ移動">→</button>
-    </div>
     <footer class="page-footer">小さな冒険へ、出発。</footer>
   </main>
 </body>
